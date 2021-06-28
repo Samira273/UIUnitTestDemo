@@ -13,7 +13,18 @@
 		E5A639822689E431002265FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A639802689E431002265FD /* Main.storyboard */; };
 		E5A639842689E435002265FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A639832689E435002265FD /* Assets.xcassets */; };
 		E5A639872689E435002265FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A639852689E435002265FD /* LaunchScreen.storyboard */; };
+		E5A639B12689E5EC002265FD /* UIUnitTestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639B02689E5EC002265FD /* UIUnitTestDemoUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5A639B32689E5EC002265FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5A6396F2689E431002265FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5A639762689E431002265FD;
+			remoteInfo = UIUnitTestDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E5A639772689E431002265FD /* UIUnitTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIUnitTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,20 @@
 		E5A639832689E435002265FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A639862689E435002265FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5A639882689E435002265FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5A639AE2689E5EC002265FD /* UIUnitTestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIUnitTestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5A639B02689E5EC002265FD /* UIUnitTestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUnitTestDemoUITests.swift; sourceTree = "<group>"; };
+		E5A639B22689E5EC002265FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E5A639742689E431002265FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5A639AB2689E5EC002265FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				E5A639792689E431002265FD /* UIUnitTestDemo */,
+				E5A639AF2689E5EC002265FD /* UIUnitTestDemoUITests */,
 				E5A639782689E431002265FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				E5A639772689E431002265FD /* UIUnitTestDemo.app */,
+				E5A639AE2689E5EC002265FD /* UIUnitTestDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +88,15 @@
 				E5A639882689E435002265FD /* Info.plist */,
 			);
 			path = UIUnitTestDemo;
+			sourceTree = "<group>";
+		};
+		E5A639AF2689E5EC002265FD /* UIUnitTestDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639B02689E5EC002265FD /* UIUnitTestDemoUITests.swift */,
+				E5A639B22689E5EC002265FD /* Info.plist */,
+			);
+			path = UIUnitTestDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +119,24 @@
 			productReference = E5A639772689E431002265FD /* UIUnitTestDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E5A639AD2689E5EC002265FD /* UIUnitTestDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5A639B72689E5EC002265FD /* Build configuration list for PBXNativeTarget "UIUnitTestDemoUITests" */;
+			buildPhases = (
+				E5A639AA2689E5EC002265FD /* Sources */,
+				E5A639AB2689E5EC002265FD /* Frameworks */,
+				E5A639AC2689E5EC002265FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5A639B42689E5EC002265FD /* PBXTargetDependency */,
+			);
+			name = UIUnitTestDemoUITests;
+			productName = UIUnitTestDemoUITests;
+			productReference = E5A639AE2689E5EC002265FD /* UIUnitTestDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +148,10 @@
 				TargetAttributes = {
 					E5A639762689E431002265FD = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					E5A639AD2689E5EC002265FD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = E5A639762689E431002265FD;
 					};
 				};
 			};
@@ -115,6 +169,7 @@
 			projectRoot = "";
 			targets = (
 				E5A639762689E431002265FD /* UIUnitTestDemo */,
+				E5A639AD2689E5EC002265FD /* UIUnitTestDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +182,13 @@
 				E5A639872689E435002265FD /* LaunchScreen.storyboard in Resources */,
 				E5A639842689E435002265FD /* Assets.xcassets in Resources */,
 				E5A639822689E431002265FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5A639AC2689E5EC002265FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +205,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5A639AA2689E5EC002265FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5A639B12689E5EC002265FD /* UIUnitTestDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5A639B42689E5EC002265FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5A639762689E431002265FD /* UIUnitTestDemo */;
+			targetProxy = E5A639B32689E5EC002265FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E5A639802689E431002265FD /* Main.storyboard */ = {
@@ -319,6 +397,44 @@
 			};
 			name = Release;
 		};
+		E5A639B52689E5EC002265FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C86JD592M;
+				INFOPLIST_FILE = UIUnitTestDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.net.ibtikar.UIUnitTestDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UIUnitTestDemo;
+			};
+			name = Debug;
+		};
+		E5A639B62689E5EC002265FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C86JD592M;
+				INFOPLIST_FILE = UIUnitTestDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.net.ibtikar.UIUnitTestDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UIUnitTestDemo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +452,15 @@
 			buildConfigurations = (
 				E5A6398C2689E435002265FD /* Debug */,
 				E5A6398D2689E435002265FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5A639B72689E5EC002265FD /* Build configuration list for PBXNativeTarget "UIUnitTestDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5A639B52689E5EC002265FD /* Debug */,
+				E5A639B62689E5EC002265FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
