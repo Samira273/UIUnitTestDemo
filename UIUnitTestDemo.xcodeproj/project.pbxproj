@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		E5A6397B2689E431002265FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A6397A2689E431002265FD /* AppDelegate.swift */; };
 		E5A6397D2689E431002265FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A6397C2689E431002265FD /* SceneDelegate.swift */; };
-		E5A6397F2689E431002265FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A6397E2689E431002265FD /* ViewController.swift */; };
+		E5A6397F2689E431002265FD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A6397E2689E431002265FD /* LoginVC.swift */; };
 		E5A639822689E431002265FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A639802689E431002265FD /* Main.storyboard */; };
 		E5A639842689E435002265FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A639832689E435002265FD /* Assets.xcassets */; };
 		E5A639872689E435002265FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A639852689E435002265FD /* LaunchScreen.storyboard */; };
 		E5A639B12689E5EC002265FD /* UIUnitTestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639B02689E5EC002265FD /* UIUnitTestDemoUITests.swift */; };
 		E5A639BF2689E60F002265FD /* UIUnitTestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639BE2689E60F002265FD /* UIUnitTestDemoTests.swift */; };
+		E5A639EA2689F702002265FD /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639E92689F702002265FD /* LoginVM.swift */; };
+		E5A639EF2689F819002265FD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639EE2689F819002265FD /* HomeVC.swift */; };
+		E5A639F22689FE55002265FD /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639F12689FE55002265FD /* LoginModel.swift */; };
+		E5A639F4268A2810002265FD /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639F3268A280F002265FD /* HomeVM.swift */; };
+		E5A639F7268A2B67002265FD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639F6268A2B67002265FD /* HomeModel.swift */; };
+		E5A639FA268A3950002265FD /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639F9268A3950002265FD /* DispatchQueue+Extension.swift */; };
+		E5A639FE268A3B6C002265FD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A639FC268A3B6C002265FD /* HomeTableViewCell.swift */; };
+		E5A639FF268A3B6C002265FD /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A639FD268A3B6C002265FD /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +46,7 @@
 		E5A639772689E431002265FD /* UIUnitTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIUnitTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A6397A2689E431002265FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5A6397C2689E431002265FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E5A6397E2689E431002265FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5A6397E2689E431002265FD /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E5A639812689E431002265FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5A639832689E435002265FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A639862689E435002265FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		E5A639BC2689E60F002265FD /* UIUnitTestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIUnitTestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A639BE2689E60F002265FD /* UIUnitTestDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUnitTestDemoTests.swift; sourceTree = "<group>"; };
 		E5A639C02689E60F002265FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5A639E92689F702002265FD /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginVM.swift; path = UIUnitTestDemo/Services/LoginVM.swift; sourceTree = SOURCE_ROOT; };
+		E5A639EE2689F819002265FD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		E5A639F12689FE55002265FD /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		E5A639F3268A280F002265FD /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		E5A639F6268A2B67002265FD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E5A639F9268A3950002265FD /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		E5A639FC268A3B6C002265FD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		E5A639FD268A3B6C002265FD /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,10 @@
 		E5A639792689E431002265FD /* UIUnitTestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E5A639F8268A3935002265FD /* Extensions */,
 				E5A6397A2689E431002265FD /* AppDelegate.swift */,
 				E5A6397C2689E431002265FD /* SceneDelegate.swift */,
-				E5A6397E2689E431002265FD /* ViewController.swift */,
+				E5A639E62689F3CC002265FD /* Features */,
 				E5A639802689E431002265FD /* Main.storyboard */,
 				E5A639832689E435002265FD /* Assets.xcassets */,
 				E5A639852689E435002265FD /* LaunchScreen.storyboard */,
@@ -126,6 +143,101 @@
 				E5A639C02689E60F002265FD /* Info.plist */,
 			);
 			path = UIUnitTestDemoTests;
+			sourceTree = "<group>";
+		};
+		E5A639E42689F3BD002265FD /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5A6397E2689E431002265FD /* LoginVC.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		E5A639E52689F3C7002265FD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639F02689FE45002265FD /* Model */,
+				E5A639E82689F6F3002265FD /* View Model */,
+				E5A639E42689F3BD002265FD /* View Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E5A639E62689F3CC002265FD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639EB2689F7E0002265FD /* Home */,
+				E5A639E52689F3C7002265FD /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E5A639E82689F6F3002265FD /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639E92689F702002265FD /* LoginVM.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		E5A639EB2689F7E0002265FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639F5268A2B5C002265FD /* Model */,
+				E5A639ED2689F804002265FD /* View Model */,
+				E5A639EC2689F7EA002265FD /* View Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E5A639EC2689F7EA002265FD /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639FB268A3B53002265FD /* Cell */,
+				E5A639EE2689F819002265FD /* HomeVC.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		E5A639ED2689F804002265FD /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639F3268A280F002265FD /* HomeVM.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		E5A639F02689FE45002265FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639F12689FE55002265FD /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5A639F5268A2B5C002265FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639F6268A2B67002265FD /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5A639F8268A3935002265FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639F9268A3950002265FD /* DispatchQueue+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E5A639FB268A3B53002265FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E5A639FC268A3B6C002265FD /* HomeTableViewCell.swift */,
+				E5A639FD268A3B6C002265FD /* HomeTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +345,7 @@
 			files = (
 				E5A639872689E435002265FD /* LaunchScreen.storyboard in Resources */,
 				E5A639842689E435002265FD /* Assets.xcassets in Resources */,
+				E5A639FF268A3B6C002265FD /* HomeTableViewCell.xib in Resources */,
 				E5A639822689E431002265FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5A6397F2689E431002265FD /* ViewController.swift in Sources */,
+				E5A639EA2689F702002265FD /* LoginVM.swift in Sources */,
+				E5A639F22689FE55002265FD /* LoginModel.swift in Sources */,
+				E5A639F4268A2810002265FD /* HomeVM.swift in Sources */,
+				E5A639EF2689F819002265FD /* HomeVC.swift in Sources */,
+				E5A639FA268A3950002265FD /* DispatchQueue+Extension.swift in Sources */,
+				E5A639F7268A2B67002265FD /* HomeModel.swift in Sources */,
+				E5A639FE268A3B6C002265FD /* HomeTableViewCell.swift in Sources */,
+				E5A6397F2689E431002265FD /* LoginVC.swift in Sources */,
 				E5A6397B2689E431002265FD /* AppDelegate.swift in Sources */,
 				E5A6397D2689E431002265FD /* SceneDelegate.swift in Sources */,
 			);
