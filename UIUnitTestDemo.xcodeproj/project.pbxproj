@@ -15,6 +15,11 @@
 		E54C5997268CECE4000996BB /* LoginVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C5996268CECE4000996BB /* LoginVCMock.swift */; };
 		E54C5999268CEF85000996BB /* LoginRepoMockWithCorrectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C5998268CEF85000996BB /* LoginRepoMockWithCorrectData.swift */; };
 		E54C599B268CF7A2000996BB /* LoginRepoMockWithInCorrectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C599A268CF7A2000996BB /* LoginRepoMockWithInCorrectData.swift */; };
+		E54C599F268CFB2C000996BB /* HomeRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C599E268CFB2C000996BB /* HomeRepoTest.swift */; };
+		E54C59A1268CFC97000996BB /* HomeVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C59A0268CFC97000996BB /* HomeVMTest.swift */; };
+		E54C59A3268CFCC8000996BB /* HomeRepoMockWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C59A2268CFCC8000996BB /* HomeRepoMockWithData.swift */; };
+		E54C59A5268CFCD5000996BB /* HomeRepoMockWithoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C59A4268CFCD5000996BB /* HomeRepoMockWithoutData.swift */; };
+		E54C59A7268CFCE3000996BB /* HomeVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C59A6268CFCE3000996BB /* HomeVCMock.swift */; };
 		E5A6397B2689E431002265FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A6397A2689E431002265FD /* AppDelegate.swift */; };
 		E5A6397D2689E431002265FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A6397C2689E431002265FD /* SceneDelegate.swift */; };
 		E5A6397F2689E431002265FD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A6397E2689E431002265FD /* LoginVC.swift */; };
@@ -58,6 +63,11 @@
 		E54C5996268CECE4000996BB /* LoginVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCMock.swift; sourceTree = "<group>"; };
 		E54C5998268CEF85000996BB /* LoginRepoMockWithCorrectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepoMockWithCorrectData.swift; sourceTree = "<group>"; };
 		E54C599A268CF7A2000996BB /* LoginRepoMockWithInCorrectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepoMockWithInCorrectData.swift; sourceTree = "<group>"; };
+		E54C599E268CFB2C000996BB /* HomeRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoTest.swift; sourceTree = "<group>"; };
+		E54C59A0268CFC97000996BB /* HomeVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVMTest.swift; sourceTree = "<group>"; };
+		E54C59A2268CFCC8000996BB /* HomeRepoMockWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoMockWithData.swift; sourceTree = "<group>"; };
+		E54C59A4268CFCD5000996BB /* HomeRepoMockWithoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoMockWithoutData.swift; sourceTree = "<group>"; };
+		E54C59A6268CFCE3000996BB /* HomeVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCMock.swift; sourceTree = "<group>"; };
 		E5A639772689E431002265FD /* UIUnitTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIUnitTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A6397A2689E431002265FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5A6397C2689E431002265FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +128,18 @@
 			path = "Login Tests";
 			sourceTree = "<group>";
 		};
+		E54C599D268CFAE8000996BB /* Home Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E54C599E268CFB2C000996BB /* HomeRepoTest.swift */,
+				E54C59A0268CFC97000996BB /* HomeVMTest.swift */,
+				E54C59A6268CFCE3000996BB /* HomeVCMock.swift */,
+				E54C59A2268CFCC8000996BB /* HomeRepoMockWithData.swift */,
+				E54C59A4268CFCD5000996BB /* HomeRepoMockWithoutData.swift */,
+			);
+			path = "Home Tests";
+			sourceTree = "<group>";
+		};
 		E5A6396E2689E431002265FD = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +187,7 @@
 		E5A639BD2689E60F002265FD /* UIUnitTestDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				E54C599D268CFAE8000996BB /* Home Tests */,
 				E5A639C02689E60F002265FD /* Info.plist */,
 				E54C599C268CF85F000996BB /* Login Tests */,
 			);
@@ -429,9 +452,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54C5997268CECE4000996BB /* LoginVCMock.swift in Sources */,
+				E54C59A1268CFC97000996BB /* HomeVMTest.swift in Sources */,
 				E54C599B268CF7A2000996BB /* LoginRepoMockWithInCorrectData.swift in Sources */,
 				E54C5999268CEF85000996BB /* LoginRepoMockWithCorrectData.swift in Sources */,
+				E54C59A3268CFCC8000996BB /* HomeRepoMockWithData.swift in Sources */,
+				E54C59A7268CFCE3000996BB /* HomeVCMock.swift in Sources */,
 				E54C5995268CEAA0000996BB /* LoginVMTest.swift in Sources */,
+				E54C599F268CFB2C000996BB /* HomeRepoTest.swift in Sources */,
+				E54C59A5268CFCD5000996BB /* HomeRepoMockWithoutData.swift in Sources */,
 				E54C598F268CD70C000996BB /* LoginRepoTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

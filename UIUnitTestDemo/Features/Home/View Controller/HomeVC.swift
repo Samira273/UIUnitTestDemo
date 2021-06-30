@@ -10,7 +10,11 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
-    let viewModel = HomeVM(reposatory: HomeReposatory())
+    var viewModel = HomeVM(reposatory: HomeReposatory()) {
+        didSet {
+            setupVM()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +24,23 @@ class HomeVC: UIViewController {
         homeTableView.estimatedRowHeight = 44
         homeTableView.delegate = self
         homeTableView.dataSource = self
-        viewModel.dataLoaded = {
-            DispatchQueue.main.async {
-                self.homeTableView.reloadData()
-            }
+    
+    }
+    
+    func setupVM() {
+        viewModel.dataLoaded = dataLoaded
+        viewModel.showError = showError(with:)
+    }
+    
+    func dataLoaded() {
+        DispatchQueue.main.async {
+            self.homeTableView.reloadData()
         }
     }
     
+    func showError(with message: String) {
+        print(message)
+    }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {

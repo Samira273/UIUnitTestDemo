@@ -16,8 +16,14 @@ class HomeVM: NSObject {
     }
     
     var dataLoaded: (() -> Void)?
+    var showError: ((String) -> Void)?
+    
     func viewDidLoad() {
         repo.loadData(completion: { model in
+            guard let model = model else {
+                self.showError?("Loading data failed")
+                return
+            }
             self.homeModel = model
             self.dataLoaded?()
         })

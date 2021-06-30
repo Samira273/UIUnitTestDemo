@@ -8,7 +8,7 @@
 import Foundation
 class HomeReposatory {
     
-    func loadData(completion: @escaping ((HomeModel) -> Void)) {
+    func loadData(completion: @escaping ((HomeModel?) -> Void)) {
         
         let url = createURLFromParameters(parameters: [:])
         let session = URLSession.shared
