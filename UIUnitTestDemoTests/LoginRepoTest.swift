@@ -18,8 +18,10 @@ class LoginRepoTest: XCTestCase {
         
         //when
         let expectation = expectation(description: "Repository Expectation") //setting expectation to be fullfilled
-        loginRepository.login(with: "smsm@gmail.com", and: "1234545") { isSuccess in
+        loginRepository.login(with: "user@mailinator.com", and: "12345678") { isSuccess, message, model  in
             XCTAssertTrue(isSuccess)
+            XCTAssertNotNil(model)
+            XCTAssertNil(message)
             expectation.fulfill()
         }
 
