@@ -18,34 +18,36 @@ class LoginReposatory {
         request.httpMethod = "POST"
         request.httpBody = body.percentEncoded()
         
-        let session = URLSession.shared
-        
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-            
-            guard error == nil else {
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                error == nil else {                                              // check for fundamental networking error
+                print("error", error ?? "Unknown error")
+                completion(false, error?.localizedDescription ?? "Unknown error", nil)
+                return
+            }
+
+            guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
+                print("statusCode should be 2xx, but is \(response.statusCode)")
+                print("response = \(response)")
+                completion(false, "Network error", nil)
                 return
             }
             
-            guard let data = data else {
-                return
-            }
             do {
-                // make sure this JSON is in the format we expect
-                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]  else {
-                    completion(false, "Login Failed", nil)
+                guard let dataDict = (try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any])?["data"] as? [String: Any] else {
+                    completion(false, "Parse error", nil)
                     return
                 }
-                guard let data = json["data"] as? [String: Any] else {
-                    completion(false, "Login Failed", nil)
-                    return
-                }
-                completion(true, nil, LoginModel(fromDictionary: data))
                 
-            } catch let error as NSError {
+                completion(true, nil, LoginModel(fromDictionary: dataDict))
+                
+            }  catch let error as NSError {
                 print("Failed to load: \(error.localizedDescription)")
+                completion(false, error.localizedDescription, nil)
             }
-        })
-        
+        }
+
         task.resume()
     }
     
