@@ -11,7 +11,11 @@ class LoginVM: NSObject {
     
     var loginFailed: ((String) -> Void)?
     var loginSucceeded: (() -> Void)?
-    private var repo = LoginReposatory()
+    private var repo: LoginReposatory
+    
+    init(repo: LoginReposatory) {
+        self.repo = repo
+    }
     
     func loginTapped(with email: String?, and password: String?) {
         if !validateEmailAndPassword(email, password) {

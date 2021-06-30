@@ -9,7 +9,11 @@ import UIKit
 
 class LoginVC: UIViewController {
     
-    var viewModel = LoginVM()
+    var viewModel = LoginVM(repo: LoginReposatory()) {
+        didSet {
+            setupVM()
+        }
+    }
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -18,7 +22,6 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFailureAlert()
-        setupVM()
     }
 
     @IBAction func loginTapped(_ sender: Any) {
@@ -34,18 +37,27 @@ class LoginVC: UIViewController {
     
     private func setupVM() {
         viewModel.loginFailed = { message in
-            DispatchQueue.main.async {
-                self.failureAlert?.message = message
-                self.present(self.failureAlert!, animated: true, completion: nil)
-                
-            }
+            self.loginFailed(with: message)
         }
         
         viewModel.loginSucceeded = {
-            DispatchQueue.main.async {
-                self.navigationController?.pushViewController(UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeVC") as! HomeVC, animated: true)
-            }
+            self.loginSuccesseded()
         }
     }
+    
+    func loginFailed(with message: String) {
+        DispatchQueue.main.async {
+            self.failureAlert?.message = message
+            self.present(self.failureAlert!, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func loginSuccesseded() {
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeVC") as! HomeVC, animated: true)
+        }
+    }
+    
 }
 
