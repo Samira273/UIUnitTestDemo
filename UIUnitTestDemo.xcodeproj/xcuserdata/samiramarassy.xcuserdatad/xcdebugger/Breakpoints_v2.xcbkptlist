@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "LoginModel"
-            landmarkType = "3">
+            landmarkName = "User"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,15 +32,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "LoginModel"
-            landmarkType = "3">
+            landmarkName = "User"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "90F01669-BAB2-417C-980C-92C9B78A27CA"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UIUnitTestDemo/Services/LoginVM.swift"
@@ -78,8 +78,8 @@
             filePath = "UIUnitTestDemo/Features/Login/View Controller/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "setupVM()"
             landmarkType = "7">
          </BreakpointContent>
@@ -96,7 +96,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "login(with:and:completion:)"
+            landmarkName = "toDictionary()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -112,8 +112,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "login(with:and:completion:)"
-            landmarkType = "7">
+            landmarkName = "LoginModel"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,6 +128,70 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
+            landmarkName = "toDictionary()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8476F42-A990-4102-80FD-48620B23018F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "login(with:and:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D8476F42-A990-4102-80FD-48620B23018F - 235fb7f716e7fb19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIUnitTestDemo.LoginReposatory.login(with: Swift.String, and: Swift.String, completion: (Swift.Bool, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;UIUnitTestDemo.LoginModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "UIUnitTestDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samiramarassy/Developer/UIUnitTestDemo/UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1276">
+               </Location>
+               <Location
+                  uuid = "D8476F42-A990-4102-80FD-48620B23018F - 8fd3b625a567dc83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in UIUnitTestDemo.LoginReposatory.login(with: Swift.String, and: Swift.String, completion: (Swift.Bool, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;UIUnitTestDemo.LoginModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "UIUnitTestDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samiramarassy/Developer/UIUnitTestDemo/UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "301">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC580A9B-BFE7-4B39-A8DC-E812803751FC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "login(with:and:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,48 +199,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "54EDBA55-BE4E-468F-BDB2-29B6D1275653"
-            shouldBeEnabled = "No"
+            uuid = "2FA0CB97-E854-4B83-9723-98279DF3DCA5"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UIUnitTestDemo/Features/Home/Model/HomeModel.swift"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "loadData(completion:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "login(with:and:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5E5D08A7-9E2C-4E05-9567-53353346143C"
-            shouldBeEnabled = "No"
+            uuid = "F22E0C56-DA5C-45EF-8D37-D984F0037A75"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UIUnitTestDemo/Features/Home/Model/HomeModel.swift"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "loadData()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "login(with:and:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8028EC28-C790-4055-9DE3-888510A34D00"
+            uuid = "213807A6-57D6-47E8-8783-0B617BB97CE4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "login(with:and:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B36178C-FAED-4172-A644-B140CC1B9B3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "login(with:and:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB5B29FF-CDE8-4AC9-BE2C-B8E040F2B2EF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "login(with:and:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59EEECB0-7B46-47D9-94A9-FC52071FF8EF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UIUnitTestDemo/Features/Home/Model/HomeModel.swift"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "loadData(completiom:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "login(with:and:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95C0C3A2-B189-45FC-B091-5DF14EF5B9F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIUnitTestDemo/Features/Login/Model/LoginReposatory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "login(with:and:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

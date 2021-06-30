@@ -34,8 +34,11 @@ class LoginVC: UIViewController {
     
     private func setupVM() {
         viewModel.loginFailed = { message in
-            self.failureAlert?.message = message
-            self.present(self.failureAlert!, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                self.failureAlert?.message = message
+                self.present(self.failureAlert!, animated: true, completion: nil)
+                
+            }
         }
         
         viewModel.loginSucceeded = {

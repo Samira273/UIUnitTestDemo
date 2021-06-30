@@ -11,15 +11,15 @@ class LoginVM: NSObject {
     
     var loginFailed: ((String) -> Void)?
     var loginSucceeded: (() -> Void)?
-    private var model = LoginModel()
+    private var repo = LoginReposatory()
+    
     func loginTapped(with email: String?, and password: String?) {
         if !validateEmailAndPassword(email, password) {
             loginFailed?("Invalid email or password")
         } else {
             // network call
-            
-            model.login(with: email!, and: password!, completion: { success in
-                if success {
+            repo.login(with: email!, and: password!, completion: { success, message, loginModel  in
+                if success && loginModel != nil {
                     self.loginSucceeded?()
                 } else {
                     self.loginFailed?("Login failed")

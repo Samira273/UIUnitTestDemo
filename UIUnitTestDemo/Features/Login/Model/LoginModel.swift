@@ -2,99 +2,119 @@
 //  LoginModel.swift
 //  UIUnitTestDemo
 //
-//  Created by Samira Marassy on 28/06/2021.
+//  Created by Samira Marassy on 30/06/2021.
 //
 
 import Foundation
-class LoginModel: NSObject {
-    func login(with email: String, and password: String, completion: @escaping ((_ success: Bool) -> Void)) {
-        
-        let url = URL(string: "https://mosaada-api-staging.ibtik.net/api/auth/login")!
-        var request = URLRequest(url: url)
-        let body = ["email": email, "password": password]
-        let bodyData = try? JSONSerialization.data(
-            withJSONObject: body,
-            options: []
-        )
-
-        // Change the URLRequest to a POST request
-        request.httpMethod = "POST"
-        request.httpBody = bodyData
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: request) { (data, response, error) in
-
-            if let error = error {
-                completion(false)
-            } else if let data = data {
-                completion(true)
-            } else {
-                completion(false)
-            }
-        }
-       
-        task.resume()
-    }
-//    func login(with email: String, and password: String, completion: @escaping ((_ success: Bool) -> Void)) {
-//
-//        let url = createURLFromParameters(parameters: ["email" : email, "password": password])
-//        let session = URLSession.shared
-//
-//        //now create the URLRequest object using the url object
-//        var request = URLRequest(url: url)
-//
-//        request.httpMethod = "post"
-//
-//        //create dataTask using the session object to send data to the server
-//        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-//
-//            guard error == nil else {
-//                return
-//            }
-//
-//            guard let data = data else {
-//                return
-//            }
-//
-//           do {
-//            //create json object from data
-//            if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-//                print(json)
-//                completion(true)
-//            }
-//           } catch let error {
-//            print(error.localizedDescription)
-//            completion(false)
-//           }
-//        })
-//
-//        task.resume()
-//    }
+struct LoginModel {
+    var accessToken : String!
+    var expiresIn : Int!
+    var refreshToken : String!
+    var tokenType : String!
+    var user : User!
     
-    private func createURLFromParameters(parameters: [String:Any]) -> URL {
-
-        var components = URLComponents()
-        components.scheme = Constants.APILogin.APIScheme
-        components.host   = Constants.APILogin.APIHost
-        components.path   = Constants.APILogin.APIPath
-        
-        if !parameters.isEmpty {
-            components.queryItems = [URLQueryItem]()
-            for (key, value) in parameters {
-                let queryItem = URLQueryItem(name: key, value: "\(value)")
-                components.queryItems!.append(queryItem)
-            }
+    init(fromDictionary dictionary: [String: Any]){
+        accessToken = dictionary["access_token"] as? String
+        expiresIn = dictionary["expires_in"] as? Int
+        refreshToken = dictionary["refresh_token"] as? String
+        tokenType = dictionary["token_type"] as? String
+        if let userData = dictionary["user"] as? [String:Any]{
+            user = User(fromDictionary: userData)
         }
-
-        return components.url!
+    }
+    
+    /**
+     * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
+     */
+    func toDictionary() -> [String:Any]
+    {
+        var dictionary = [String:Any]()
+        if accessToken != nil{
+            dictionary["access_token"] = accessToken
+        }
+        if expiresIn != nil{
+            dictionary["expires_in"] = expiresIn
+        }
+        if refreshToken != nil{
+            dictionary["refresh_token"] = refreshToken
+        }
+        if tokenType != nil{
+            dictionary["token_type"] = tokenType
+        }
+        if user != nil{
+            dictionary["user"] = user.toDictionary()
+        }
+        return dictionary
     }
 }
 
-struct Constants {
+struct User{
 
-    struct APILogin {
-        static let APIScheme = "https"
-        static let APIHost = "mosaada-api-staging.ibtik.net"
-        static let APIPath = "/api/auth/login"
+    var acceptance : AnyObject!
+    var countryCode : AnyObject!
+    var email : String!
+    var haveInterests : Bool!
+    var id : Int!
+    var isVerified : Bool!
+    var name : String!
+    var onBoarding : AnyObject!
+    var phone : AnyObject!
+    var role : Int!
+
+
+    /**
+     * Instantiate the instance using the passed dictionary values to set the properties values
+     */
+    init(fromDictionary dictionary: [String:Any]){
+        acceptance = dictionary["acceptance"] as? AnyObject
+        countryCode = dictionary["country_code"] as? AnyObject
+        email = dictionary["email"] as? String
+        haveInterests = dictionary["haveInterests"] as? Bool
+        id = dictionary["id"] as? Int
+        isVerified = dictionary["isVerified"] as? Bool
+        name = dictionary["name"] as? String
+        onBoarding = dictionary["onBoarding"] as? AnyObject
+        phone = dictionary["phone"] as? AnyObject
+        role = dictionary["role"] as? Int
     }
+
+    /**
+     * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
+     */
+    func toDictionary() -> [String:Any]
+    {
+        var dictionary = [String:Any]()
+        if acceptance != nil{
+            dictionary["acceptance"] = acceptance
+        }
+        if countryCode != nil{
+            dictionary["country_code"] = countryCode
+        }
+        if email != nil{
+            dictionary["email"] = email
+        }
+        if haveInterests != nil{
+            dictionary["haveInterests"] = haveInterests
+        }
+        if id != nil{
+            dictionary["id"] = id
+        }
+        if isVerified != nil{
+            dictionary["isVerified"] = isVerified
+        }
+        if name != nil{
+            dictionary["name"] = name
+        }
+        if onBoarding != nil{
+            dictionary["onBoarding"] = onBoarding
+        }
+        if phone != nil{
+            dictionary["phone"] = phone
+        }
+        if role != nil{
+            dictionary["role"] = role
+        }
+        return dictionary
+    }
+
 }

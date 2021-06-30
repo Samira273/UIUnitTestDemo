@@ -10,7 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
-    let viewModel = HomeVM()
+    let viewModel = HomeVM(reposatory: HomeReposatory())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +31,12 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.titles.count
+        return viewModel.homeModel.homeDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
-        cell.configureCell(with: viewModel.titles[indexPath.row])
+        cell.configureCell(with: viewModel.homeModel.homeDataArray[indexPath.row])
         return cell
     }
     

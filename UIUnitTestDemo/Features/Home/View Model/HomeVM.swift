@@ -7,12 +7,18 @@
 
 import Foundation
 class HomeVM: NSObject {
-    var model = HomeModel()
-    var titles: [String] = []
+    
+    var repo: HomeReposatory
+    var homeModel = HomeModel()
+    
+    init (reposatory: HomeReposatory) {
+        self.repo = reposatory
+    }
+    
     var dataLoaded: (() -> Void)?
     func viewDidLoad() {
-        model.loadData(completion: { data in
-            self.titles = data
+        repo.loadData(completion: { model in
+            self.homeModel = model
             self.dataLoaded?()
         })
     }
