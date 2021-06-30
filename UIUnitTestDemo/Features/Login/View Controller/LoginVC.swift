@@ -33,6 +33,7 @@ class LoginVC: UIViewController {
     private func setupFailureAlert() {
         failureAlert = UIAlertController(title: "", message: "", preferredStyle: UIAlertController.Style.alert)
         failureAlert?.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        failureAlert?.accessibilityLabel = "login failed"
     }
     
     private func setupVM() {
